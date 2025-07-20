@@ -27,11 +27,11 @@ const server = new McpServer({
       description: "Get a random Yo Mama joke",
       parameters: {},
     },
-    {
-      name: "get-current-time",
-      description: "Get the current server time",
-      parameters: {},
-    },
+    // {
+    //   name: "get-current-time",
+    //   description: "Get the current server time",
+    //   parameters: {},
+    // },
   ],
 });
 
