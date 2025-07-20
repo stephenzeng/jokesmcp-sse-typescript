@@ -27,8 +27,29 @@ const server = new McpServer({
       description: "Get a random Yo Mama joke",
       parameters: {},
     },
+    {
+      name: "get-current-time",
+      description: "Get the current server time",
+      parameters: {},
+    },
   ],
 });
+
+// Get current time tool
+const getCurrentTime = server.tool(
+  "get-current-time",
+  "Get the current server time",
+  async () => {
+    return {
+      content: [
+        {
+          type: "text",
+          text: new Date().toISOString(),
+        },
+      ],
+    };
+  }
+);
 
 // Get Chuck Norris joke tool
 const getChuckJoke = server.tool(
