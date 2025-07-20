@@ -36,20 +36,20 @@ const server = new McpServer({
 });
 
 // Get current time tool
-const getCurrentTime = server.tool(
-  "get-current-time",
-  "Get the current server time",
-  async () => {
-    return {
-      content: [
-        {
-          type: "text",
-          text: new Date().toISOString(),
-        },
-      ],
-    };
-  }
-);
+// const getCurrentTime = server.tool(
+//   "get-current-time",
+//   "Get the current server time",
+//   async () => {
+//     return {
+//       content: [
+//         {
+//           type: "text",
+//           text: new Date().toISOString(),
+//         },
+//       ],
+//     };
+//   }
+// );
 
 // Get Chuck Norris joke tool
 const getChuckJoke = server.tool(
